@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --primary-header: hsl(75, 95%, 60%);
-    --secondary-header: hsl(75, 95%, 50%);
-    --grey-700: hsl(0, 0%, 20%);
-    --grey-800: hsl(0, 0%, 12%);
-    --grey-900: hsl(0, 0%, 8%);
-    --primary-text: hsl(0, 0%, 10%);
-    --secondary-text: hsl(0, 0%, 30%);
+--Green: hsl(75, 94%, 57%);
+--White: hsl(0, 0%, 100%);
+--Grey-700: hsl(0, 0%, 20%);
+--Grey-800: hsl(0, 0%, 12%);
+--Grey-900: hsl(0, 0%, 8%);
 
-    --font-header: Inter, sans-serif, 26px;
-    --font-body: Inter, sans-serif, 14px;
+
+    --font-family-header: 'Inter', sans-serif;
+    --font-family-body: 'Inter', sans-serif;
     --font-size-header: 2rem;
     --font-size-body: 1rem;
     --weight-400: 400;
@@ -21,20 +20,22 @@
 body {
     font-family: var(--font-body);
     font-size: var(--font-size-body);
-    color: var(--primary-text);
-    background-color: hsl(0, 0%, 98%);
+    color: var(--White);
+    background-color: var(--Grey-900);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     margin: 0;
 }
 
 .card {
-    background-color: var(--grey-900);
+    background-color: var(--Grey-800);
     width: 24rem;
     border-radius: 16px;
     margin: 1rem;
+    position: relative;
 }
 
 .card,
@@ -46,12 +47,7 @@ body {
 }
 
 .card-header {
-    background-color: var(--primary-header);
-    color: white;
-    padding: 1rem;
-    border-radius: 16px 16px 0 0;
-    width: 100%;
-    text-align: center;
+    padding: 2rem 0 0.5rem 0;
 }
 
 .card-image {
@@ -59,29 +55,31 @@ body {
     width: 100px;
     object-fit: cover; /* Prevents distortion */
     border-radius: 100%;
-    margin-bottom: 1.5rem;
 }
 
 .card-title {
     font-weight: var(--weight-600);
     font-size: var(--font-size-header);
+    color: var(--White);
     margin: 0;
+    text-align: center;
 }
 
 .card-subtitle {
     font-weight: var(--weight-400);
     font-size: var(--font-size-body);
-    color: var(--secondary-text);
+    color: var(--Green);
     margin: var(--font-size-body) 0;
 }
 
 .card-blurb {
     font-size: var(--font-size-body);
+    text-align: center;
+
 }
 
 .card-body {
     padding: 1rem;
-    color: var(--secondary-text);
 }   
 
 .card-links {
